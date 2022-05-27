@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+html{
+  height: 100%;
+}
+body{
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#footer{
+  margin-top: auto;
+}
+
+#r1:checked ~ .slider {
+  transform: translateX(0vw);
+}
+#r2:checked ~ .slider {
+  transform: translateX(-100vw);
+}
+
+#r1:checked ~ .radNav .radBtn1 {
+  background-color: #fff;
+}
+
+#r2:checked ~ .radNav .radBtn2 {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+/* TOAST/SUCCESS/YELLOW */
+
+.toast-success-container {
+  color: #FACC15 !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  background: #828282 !important;
+  border: 1px solid #FACC15 !important;
+  box-shadow: 0px 1px 5px rgba(248, 175, 175, 0.1) !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+}
+
+.toast-success-container-after {
+  overflow: hidden;
+  position: relative;
+}
+
+.toast-success-container-after::after{
+  top: 0;
+  left: 0;
+  content: '';
+  width: 7px;
+  height: 100%;
+  position: absolute;
+  display: inline-block;
+  background-color: #FACC15;
+}
+
+/* TOAST/INFO/BLACK */
+
+.toast-info-container {
+  color: #000000 !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  background: #ffffff !important;
+  border: 1px solid #000000 !important;
+  box-shadow: 0px 1px 5px rgba(248, 175, 175, 0.1) !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  --toastify-color-progress-info: #000000 !important;
+}
+
+.toast-info-container-after {
+  overflow: hidden;
+  position: relative;
+}
+
+.toast-info-container-after::after{
+  top: 0;
+  left: 0;
+  content: '';
+  width: 7px;
+  height: 100%;
+  position: absolute;
+  display: inline-block;
+  background-color: #000000;
+}
